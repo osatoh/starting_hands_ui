@@ -170,30 +170,6 @@ const cards = [
   ['2', '2', 'offsuited'],
 ]
 
-/* This example requires Tailwind CSS v2.0+ */
-import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
-
-const people = [
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  // More people...
-]
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -203,7 +179,7 @@ export default function Example() {
     <div className=" max-w-xl mx-auto sm:px-6 lg:px-8">
       <ul
         role="list"
-        className="justify-items-center grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
+        className="justify-items-center mb-5 grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
       >
         <li className="border border-gray-200 table text-9xl h-60 w-40 col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
           <div className="table-cell align-middle">{cards[0][0]}</div>
@@ -219,6 +195,26 @@ export default function Example() {
           </div>
         </li>
       </ul>
+      <div className="grid grid-cols-3 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
+        <button
+          type="button"
+          className="inline items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Fold
+        </button>
+        <button
+          type="button"
+          className="inline items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Call
+        </button>
+        <button
+          type="button"
+          className="inline items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Raise
+        </button>
+      </div>
     </div>
   )
 }
